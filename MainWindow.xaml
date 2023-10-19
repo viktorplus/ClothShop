@@ -15,16 +15,21 @@
         <StackPanel Background="LightGray" Grid.Row="0" Grid.RowSpan="2"/>
         <StackPanel Background="LightBlue" Grid.Row="0" Margin="80,60,80,0"/>
         <StackPanel Background="Gray" Margin="80,0,80,0" Grid.Row="1">
-
             <ListView x:Name="LVMain" MouseDoubleClick="LVMain_MouseDoubleClick" SelectionChanged="LVMain_SelectionChanged" Margin="30 50 30 30">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <WrapPanel Orientation="Horizontal">
-                            <StackPanel Orientation="Vertical">
-                                <Image Source="{Binding Image}" Width="200" Height="200"/>
-                                <Label Content="{Binding Name}"/>
-                                <Label Content="{Binding Price}" Foreground="LightBlue"/>
-                            </StackPanel>
+                            <Border CornerRadius="6" 
+                        Width="390"
+                BorderBrush="Black"
+                BorderThickness="2"
+                Padding="8">
+                                <StackPanel Orientation="Vertical">
+                                    <Image Source="{Binding Image}" Width="200" Height="200"/>
+                                    <Label Content="{Binding Name}"/>
+                                    <Label Content="{Binding Price}" Foreground="LightBlue"/>
+                                </StackPanel>
+                            </Border>
                         </WrapPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

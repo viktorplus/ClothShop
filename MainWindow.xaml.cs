@@ -24,5 +24,15 @@ namespace WpfApp6
         {
             InitializeComponent();
         }
+
+        private void LVMain_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void LVMain_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

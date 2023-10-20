@@ -8,7 +8,7 @@ namespace WpfApp6.Domain
 {
     public class GudList
     {
-        private List<Gud> goods;
+        public List<Gud> goods;
 
         public GudList()
         {
@@ -23,11 +23,6 @@ namespace WpfApp6.Domain
         public void RemoveGud(Gud gud)
         {
             goods.Remove(gud);
-        }
-
-        public List<Gud> GetAllGoods()
-        {
-            return goods;
         }
         public List<Gud> SearchGoodsByName(string partialName)
         {

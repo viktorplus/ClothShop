@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:WpfApp6"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800" MinHeight="600" MinWidth="800">
+        Title="MainWindow" Height="800" Width="1200" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="107*"/>
@@ -15,24 +15,30 @@
         <StackPanel Background="LightGray" Grid.Row="0" Grid.RowSpan="2"/>
         <StackPanel Background="LightBlue" Grid.Row="0" Margin="80,60,80,0"/>
         <StackPanel Background="Gray" Margin="80,0,80,0" Grid.Row="1">
-            <ListView x:Name="LVMain" MouseDoubleClick="LVMain_MouseDoubleClick" SelectionChanged="LVMain_SelectionChanged" Margin="30 50 30 30">
+            <ListView x:Name="LVMain" MouseDoubleClick="LVMain_MouseDoubleClick" SelectionChanged="LVMain_SelectionChanged" Margin="30 50 30 30" MaxHeight="400">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <WrapPanel Orientation="Horizontal">
-                            <Border CornerRadius="6" 
-                        Width="390"
+                        <!--<Border CornerRadius="6" 
+                        Width="210"
                 BorderBrush="Black"
                 BorderThickness="2"
-                Padding="8">
-                                <StackPanel Orientation="Vertical">
-                                    <Image Source="{Binding Image}" Width="200" Height="200"/>
-                                    <Label Content="{Binding Name}"/>
-                                    <Label Content="{Binding Price}" Foreground="LightBlue"/>
-                                </StackPanel>
-                            </Border>
-                        </WrapPanel>
+                Padding="8">-->
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="{Binding Photo}" Width="150" Height="200"/>
+                            <TextBlock  Text="{Binding Price, StringFormat={}{0} $}" Foreground="DarkRed"/>
+                            <Label Content="{Binding Name}"/>
+                        </StackPanel>
+                        <!--</Border>-->
                     </DataTemplate>
                 </ListView.ItemTemplate>
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Width="{Binding (FrameworkElement.ActualWidth), RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}"
+                       ItemWidth="{Binding (ListView.View).ItemWidth, RelativeSource={RelativeSource AncestorType=ListView}}"
+                       MinWidth="{Binding ItemWidth, RelativeSource={RelativeSource Self}}"
+                       ItemHeight="{Binding (ListView.View).ItemHeight, RelativeSource={RelativeSource AncestorType=ListView}}" />
+                        </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
             </ListView>
         </StackPanel>
     </Grid>

@@ -12,6 +12,7 @@
             <RowDefinition Height="25*"/>
             <RowDefinition Height="73*"/>
         </Grid.RowDefinitions>
+
         <Image Source="https://img.freepik.com/premium-photo/young-stylish-beautiful-girl-sunglasses-is-walking-with-multi-colored-shopping-bags_237672-360.jpg" Margin="0,-115,0,196" Grid.RowSpan="2"/>
         <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <StackPanel.Background>
@@ -40,6 +41,7 @@
                             <TextBlock  Text="{Binding Price, StringFormat={}{0} $}" Foreground="DarkRed"/>
                             <Label Content="{Binding Name}"/>
                         </StackPanel>
+
                         <!--</Border>-->
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -53,5 +55,9 @@
                 </ListView.ItemsPanel>
             </ListView>
         </StackPanel>
+        <!--  Viktor2  -->
+        <Button Content="Регистрация" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="20,20" Click="Registere_Click"/>
+        <Frame Name="NavigationFrame" Grid.Row="0" Grid.RowSpan="2"/>
+        <!--  Viktor2  -->
     </Grid>
 </Window>

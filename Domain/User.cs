@@ -9,7 +9,7 @@ namespace WpfApp6.Domain
         private string _lastname;
         private string _email;
         private string _password;
-        private DateTime? _dateofbirth;
+        private DateTime _dateofbirth;
         private string _address;
         private string _phonenumber;
 
@@ -62,7 +62,7 @@ namespace WpfApp6.Domain
                 OnPropertyChanged(nameof(Password));
             }
         }
-        public DateTime? Dateofbirth
+        public DateTime Dateofbirth
         {
             get { return _dateofbirth; }
             set

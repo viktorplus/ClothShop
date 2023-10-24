@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WpfApp6.Domain
 {
-    public class Gud : INotifyPropertyChanged
+    public class Goods : INotifyPropertyChanged
     {
         public int itemId;
         public int ItemId
@@ -65,7 +65,7 @@ namespace WpfApp6.Domain
             set { dateAdded = value; NotifyPropertyChanged("DateAdded"); }
         }
 
-        public Gud(int itemId, string photo, string name, string description, string color, string size, int count, float price, DateTime dateAdded)
+        public Goods(int itemId, string photo, string name, string description, string color, string size, int count, float price, DateTime dateAdded)
         {
             ItemId = itemId;
             Photo = photo;

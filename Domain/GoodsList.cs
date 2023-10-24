@@ -6,25 +6,24 @@ using System.Threading.Tasks;
 
 namespace WpfApp6.Domain
 {
-    public class GudList
+    public class GoodsList
     {
-        public List<Gud> goods;
-
-        public GudList()
+        public List<Goods> goods;
+        public GoodsList()
         {
-            goods = new List<Gud>();
+            goods = new List<Goods>();
         }
 
-        public void AddGud(Gud gud)
+        public void AddGud(Goods gud)
         {
             goods.Add(gud);
         }
 
-        public void RemoveGud(Gud gud)
+        public void RemoveGud(Goods gud)
         {
             goods.Remove(gud);
         }
-        public List<Gud> SearchGoodsByName(string partialName)
+        public List<Goods> SearchGoodsByName(string partialName)
         {
             partialName = partialName.ToLower();
 
@@ -32,17 +31,17 @@ namespace WpfApp6.Domain
                 .Where(g => g.Name.ToLower().Contains(partialName))
                 .ToList();
         }
-        public List<Gud> SortGoodsByPrice()
+        public List<Goods> SortGoodsByPrice()
         {
             return goods.OrderBy(g => g.Price).ToList();
         }
 
-        public List<Gud> SortGoodsByName()
+        public List<Goods> SortGoodsByName()
         {
             return goods.OrderBy(g => g.Name).ToList();
         }
 
-        public List<Gud> SortGoodsByDateAdded()
+        public List<Goods> SortGoodsByDateAdded()
         {
             return goods.OrderByDescending(g => g.DateAdded).ToList();
         }

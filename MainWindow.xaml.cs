@@ -21,13 +21,13 @@ namespace WpfApp6
     /// </summary>
     public partial class MainWindow : Window
     {
-        UserList userList;
+        //UserList userList;
         GoodsList list;
         ShowGood? showGood = null;
         public MainWindow()
         {
 
-            userList = new UserList();
+            //userList = new UserList();
             list = new GoodsList();
             list.AddGud(new Goods(1,@"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSzxBQ-k5CztX5ZIW9oMuEJUeduLMz87oDEpsFPG3a2M5ZOHnW6A0q2pIp3S0iz2xUeql4yyXewo51NPZz52i4wL9IRwLgwREE50VDH6IsM&usqp=CAE", "Skirt", "Super cute skirt", "Black", "XL", 4, 100.99f, DateTime.Now));
             list.AddGud(new Goods(1,@"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSzxBQ-k5CztX5ZIW9oMuEJUeduLMz87oDEpsFPG3a2M5ZOHnW6A0q2pIp3S0iz2xUeql4yyXewo51NPZz52i4wL9IRwLgwREE50VDH6IsM&usqp=CAE", "Skirt", "Super cute skirt", "Black", "XL", 4, 100.99f, DateTime.Now));
@@ -46,11 +46,11 @@ namespace WpfApp6
             LVMain.ItemsSource = list.goods;
         }
 
-        private void Registere_Click(object sender, RoutedEventArgs e)
-        {
-            Registration registrationPage = new Registration(userList); 
-            NavigationFrame.Navigate(registrationPage);
-        }
+        //private void Registere_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Registration registrationPage = new Registration(userList); 
+        //    NavigationFrame.Navigate(registrationPage);
+        //}
 
 
 
@@ -72,6 +72,11 @@ namespace WpfApp6
                 showGood = null;
                 MessageBox.Show("Error with selection!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void NavigationFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
         }
     }
 }

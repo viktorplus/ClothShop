@@ -55,9 +55,5 @@
                 </ListView.ItemsPanel>
             </ListView>
         </StackPanel>
-        <!--  Viktor2  
-        <!--  Viktor2  <Button Content="Регистрация" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="20,20" Click="Registere_Click"/>
-        <!--  Viktor2  <Frame Name="NavigationFrame" Grid.Row="0" Grid.RowSpan="2" Height="784" VerticalAlignment="Bottom" Navigated="NavigationFrame_Navigated"/>
-         Viktor2  -->
     </Grid>
 </Window>

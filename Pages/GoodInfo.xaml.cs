@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp6.Domain;
 
 namespace WpfApp6.Pages
 {
@@ -20,9 +21,19 @@ namespace WpfApp6.Pages
     /// </summary>
     public partial class GoodInfo : UserControl
     {
-        public GoodInfo()
+        public Goods selectedGud;
+        public GoodInfo(Goods gd)
         {
+            selectedGud = gd;
             InitializeComponent();
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri(gd.photo);
+            image.EndInit();
+            Image myImage = new Image();
+            myImage.Source = image;
+            SPTitle.Children.Add(myImage);
+            this.selectedGud = gd;
         }
     }
 }

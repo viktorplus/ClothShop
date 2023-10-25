@@ -26,7 +26,7 @@ namespace WpfApp6.Pages
 
         UserList userList;
         GoodsList list;
-        ShowGood? showGood = null;
+        //ShowGood? showGood = null;
         public Catalog()
         {
             userList = new UserList();
@@ -51,22 +51,22 @@ namespace WpfApp6.Pages
 
         private void LVMain_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (showGood != null && showGood.selectedGud != null) { showGood.Hide(); showGood.Show(); }
+            //if (showGood != null && showGood.selectedGud != null) { showGood.Hide(); showGood.Show(); }
         }
 
         private void LVMain_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var sel = LVMain.SelectedItem;
-            try
-            {
-                if (showGood != null) showGood.Close();
-                showGood = new ShowGood(sel as Goods);
-            }
-            catch
-            {
-                showGood = null;
-                MessageBox.Show("Error with selection!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            //var sel = LVMain.SelectedItem;
+            //try
+            //{
+            //    if (showGood != null) showGood.Close();
+            //    showGood = new ShowGood(sel as Goods);
+            //}
+            //catch
+            //{
+            //    showGood = null;
+            //    MessageBox.Show("Error with selection!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
+            //}
         }
 
         private void Cart_Click(object sender, RoutedEventArgs e)

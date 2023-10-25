@@ -22,18 +22,18 @@ namespace WpfApp6.Pages
     public partial class GoodInfo : UserControl
     {
         public Goods selectedGud;
-        public GoodInfo(Goods gd)
+        public GoodInfo()
         {
-            selectedGud = gd;
+            //selectedGud = gd;
             InitializeComponent();
-            BitmapImage image = new BitmapImage();
-            image.BeginInit();
-            image.UriSource = new Uri(gd.photo);
-            image.EndInit();
-            Image myImage = new Image();
-            myImage.Source = image;
-            SPTitle.Children.Add(myImage);
-            this.selectedGud = gd;
+            //BitmapImage image = new BitmapImage();
+            //image.BeginInit();
+            //image.UriSource = new Uri(gd.photo);
+            //image.EndInit();
+            //Image myImage = new Image();
+            //myImage.Source = image;
+            //SPTitle.Children.Add(myImage);
+            //this.selectedGud = null;
         }
     }
 }

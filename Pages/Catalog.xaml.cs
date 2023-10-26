@@ -23,90 +23,76 @@ namespace WpfApp6.Pages
     /// </summary>
     public partial class Catalog : UserControl
     {
-
-        UserList userList;
-        GoodsList list;
-        //ShowGood? showGood = null;
         public Catalog()
         {
-            userList = new UserList();
-            list = new GoodsList();
-            list.AddGud(new Goods(1, @"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSzxBQ-k5CztX5ZIW9oMuEJUeduLMz87oDEpsFPG3a2M5ZOHnW6A0q2pIp3S0iz2xUeql4yyXewo51NPZz52i4wL9IRwLgwREE50VDH6IsM&usqp=CAE", "Skirt", "Super cute skirt", "Black", "XL", 4, 100.99f, DateTime.Now));
-            list.AddGud(new Goods(1, @"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSzxBQ-k5CztX5ZIW9oMuEJUeduLMz87oDEpsFPG3a2M5ZOHnW6A0q2pIp3S0iz2xUeql4yyXewo51NPZz52i4wL9IRwLgwREE50VDH6IsM&usqp=CAE", "Skirt", "Super cute skirt", "Black", "XL", 4, 100.99f, DateTime.Now));
-            list.AddGud(new Goods(1, @"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSzxBQ-k5CztX5ZIW9oMuEJUeduLMz87oDEpsFPG3a2M5ZOHnW6A0q2pIp3S0iz2xUeql4yyXewo51NPZz52i4wL9IRwLgwREE50VDH6IsM&usqp=CAE", "Skirt", "Super cute skirt", "Black", "XL", 4, 100.99f, DateTime.Now));
-            list.AddGud(new Goods(1, @"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSzxBQ-k5CztX5ZIW9oMuEJUeduLMz87oDEpsFPG3a2M5ZOHnW6A0q2pIp3S0iz2xUeql4yyXewo51NPZz52i4wL9IRwLgwREE50VDH6IsM&usqp=CAE", "Skirt", "Super cute skirt", "Black", "XL", 4, 100.99f, DateTime.Now));
-            list.AddGud(new Goods(1, @"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSzxBQ-k5CztX5ZIW9oMuEJUeduLMz87oDEpsFPG3a2M5ZOHnW6A0q2pIp3S0iz2xUeql4yyXewo51NPZz52i4wL9IRwLgwREE50VDH6IsM&usqp=CAE", "Skirt", "Super cute skirt", "Black", "XL", 4, 100.99f, DateTime.Now));
-            list.AddGud(new Goods(1, @"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSzxBQ-k5CztX5ZIW9oMuEJUeduLMz87oDEpsFPG3a2M5ZOHnW6A0q2pIp3S0iz2xUeql4yyXewo51NPZz52i4wL9IRwLgwREE50VDH6IsM&usqp=CAE", "Skirt", "Super cute skirt", "Black", "XL", 4, 100.99f, DateTime.Now));
-            list.AddGud(new Goods(1, @"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSzxBQ-k5CztX5ZIW9oMuEJUeduLMz87oDEpsFPG3a2M5ZOHnW6A0q2pIp3S0iz2xUeql4yyXewo51NPZz52i4wL9IRwLgwREE50VDH6IsM&usqp=CAE", "Skirt", "Super cute skirt", "Black", "XL", 4, 100.99f, DateTime.Now));
-            list.AddGud(new Goods(1, @"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSzxBQ-k5CztX5ZIW9oMuEJUeduLMz87oDEpsFPG3a2M5ZOHnW6A0q2pIp3S0iz2xUeql4yyXewo51NPZz52i4wL9IRwLgwREE50VDH6IsM&usqp=CAE", "Skirt", "Super cute skirt", "Black", "XL", 4, 100.99f, DateTime.Now));
-            list.AddGud(new Goods(1, @"https://content.rozetka.com.ua/goods/images/big/355902578.jpg", "Skirt", "Super cute skirt", "Black", "XL", 4, 99.99f, DateTime.Now));
-            list.AddGud(new Goods(1, @"https://content.rozetka.com.ua/goods/images/big/355902578.jpg", "Skirt", "Super cute skirt", "Black", "XL", 4, 99.99f, DateTime.Now));
-            list.AddGud(new Goods(1, @"https://content.rozetka.com.ua/goods/images/big/355902578.jpg", "Skirt", "Super cute skirt", "Black", "XL", 4, 99.99f, DateTime.Now));
-            list.AddGud(new Goods(1, @"https://content.rozetka.com.ua/goods/images/big/355902578.jpg", "Skirt", "Super cute skirt", "Black", "XL", 4, 99.99f, DateTime.Now));
-            list.AddGud(new Goods(1, @"https://content.rozetka.com.ua/goods/images/big/355902578.jpg", "Skirt", "Super cute skirt", "Black", "XL", 4, 99.99f, DateTime.Now));
             InitializeComponent();
-            LVMain.ItemsSource = list.goods;
-        }
 
-
-        private void LVMain_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            //if (showGood != null && showGood.selectedGud != null) { showGood.Hide(); showGood.Show(); }
-        }
-
-        private void LVMain_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            //var sel = LVMain.SelectedItem;
-            //try
-            //{
-            //    if (showGood != null) showGood.Close();
-            //    showGood = new ShowGood(sel as Goods);
-            //}
-            //catch
-            //{
-            //    showGood = null;
-            //    MessageBox.Show("Error with selection!", "Error!", MessageBoxButton.OK, MessageBoxImage.Error);
-            //}
+            MainFrame.Content = new MainList();
         }
 
         private void Cart_Click(object sender, RoutedEventArgs e)
         {
-            NavigatorObject.Switch(new Cart());
+
+            if (MainFrame.Content.GetType() != typeof(Cart))
+            {
+                MainFrame.Content = new Cart();
+            }
         }
 
         private void Catalog_Click(object sender, RoutedEventArgs e)
         {
-            NavigatorObject.Switch(new Catalog());
+            if(MainFrame.Content.GetType()!=typeof(MainList))
+            {
+                MainFrame.Content = new MainList();
+            }
         }
 
         private void Checkout_Click(object sender, RoutedEventArgs e)
         {
-            NavigatorObject.Switch(new Checkout());
+            if (MainFrame.Content.GetType() != typeof(Checkout))
+            {
+                MainFrame.Content = new Checkout();
+            }
         }
 
         private void GoodInfo_Click(object sender, RoutedEventArgs e)
         {
-            NavigatorObject.Switch(new GoodInfo());
+            if (MainFrame.Content.GetType() != typeof(GoodInfo))
+            {
+                MainFrame.Content = new GoodInfo();
+            }
         }
 
         private void UserInfo_Click(object sender, RoutedEventArgs e)
         {
-            NavigatorObject.Switch(new UserInfo());
+            if (MainFrame.Content.GetType() != typeof(UserInfo))
+            {
+                MainFrame.Content = new UserInfo();
+            }
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            NavigatorObject.Switch(new Login());
+            if (MainFrame.Content.GetType() != typeof(Login))
+            {
+                MainFrame.Content = new Login();
+            }
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)
         {
-            NavigatorObject.Switch(new Registation());
+            if (MainFrame.Content.GetType() != typeof(Registation))
+            {
+                MainFrame.Content = new Registation();
+            }
         }
 
         private void StartPage_Click(object sender, RoutedEventArgs e)
         {
-            NavigatorObject.Switch(new Catalog());
+            if (MainFrame.Content.GetType() != typeof(StartPage))
+            {
+                MainFrame.Content = new StartPage();
+            }
         }
     }
 

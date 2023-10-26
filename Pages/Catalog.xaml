@@ -9,18 +9,17 @@
              d:DesignHeight="800" d:DesignWidth="1200" >
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="73*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="133*"/>
         </Grid.RowDefinitions>
-
-        <Image Source="https://img.freepik.com/premium-photo/young-stylish-beautiful-girl-sunglasses-is-walking-with-multi-colored-shopping-bags_237672-360.jpg" Margin="0,-115,0,196" Grid.RowSpan="2"/>
+        <Image Source="https://img.freepik.com/premium-photo/young-stylish-beautiful-girl-sunglasses-is-walking-with-multi-colored-shopping-bags_237672-360.jpg" Margin="0,-80,0,161" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
         <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <StackPanel.Background>
                 <SolidColorBrush Color="White" Opacity=".5"/>
-                
+
             </StackPanel.Background>
         </StackPanel>
-        <StackPanel Grid.Row="0" Margin="80,132,80,0" Orientation="Horizontal">
+        <StackPanel Grid.Row="0" Margin="80 0 80 50 " Orientation="Horizontal" Grid.ColumnSpan="2">
             <StackPanel.Background>
                 <SolidColorBrush Color="LightBlue" Opacity=".5"/>
             </StackPanel.Background>
@@ -29,7 +28,6 @@
   Width="100"
   Content="Cart"
                 Click="Cart_Click"
-  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
   Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
   ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button
@@ -37,7 +35,6 @@
   Width="100"
   Content="Catalog"
                 Click="Catalog_Click"
-  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
   Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
   ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button
@@ -45,7 +42,6 @@
   Width="100"
   Content="Checkout"
                 Click="Checkout_Click"
-  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
   Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
   ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button
@@ -53,7 +49,6 @@
   Width="100"
   Content="GoodInfo"
                 Click="GoodInfo_Click"
-  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
   Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
   ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button
@@ -61,7 +56,6 @@
   Width="100"
   Content="UserInfo"
                 Click="UserInfo_Click"
-IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
 Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
 ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button
@@ -69,15 +63,13 @@ ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
   Width="100"
   Content="Login"
                 Click="Login_Click"
-IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
 Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
 ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button
                 Margin="10"
-  Width="100"
+  Width="120"
   Content="Registration"
                 Click="Registration_Click"
-IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
 Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
 ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button
@@ -85,41 +77,9 @@ ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
   Width="100"
   Content="StartPage"
                 Click="StartPage_Click"
-IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
 Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
 ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
-
         </StackPanel>
-        <StackPanel Margin="80,0,80,0" Grid.Row="1">
-            <StackPanel.Background>
-                <SolidColorBrush Color="Gray" Opacity="1"/>
-            </StackPanel.Background>
-            <ListView x:Name="LVMain" MouseDoubleClick="LVMain_MouseDoubleClick" SelectionChanged="LVMain_SelectionChanged" Margin="30 50 0 30" MaxHeight="510">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <!--<Border CornerRadius="6" 
-                        Width="210"
-                BorderBrush="Black"
-                BorderThickness="2"
-                Padding="8">-->
-                        <StackPanel Orientation="Vertical">
-                            <Image Source="{Binding Photo}" Width="150" Height="200"/>
-                            <TextBlock  Text="{Binding Price, StringFormat={}{0} $}" Foreground="DarkRed"/>
-                            <Label Content="{Binding Name}"/>
-                        </StackPanel>
-
-                        <!--</Border>-->
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-                <ListView.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel Width="{Binding (FrameworkElement.ActualWidth), RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}"
-                       ItemWidth="{Binding (ListView.View).ItemWidth, RelativeSource={RelativeSource AncestorType=ListView}}"
-                       MinWidth="{Binding ItemWidth, RelativeSource={RelativeSource Self}}"
-                       ItemHeight="{Binding (ListView.View).ItemHeight, RelativeSource={RelativeSource AncestorType=ListView}}" />
-                    </ItemsPanelTemplate>
-                </ListView.ItemsPanel>
-            </ListView>
-        </StackPanel>
+        <Frame Grid.Row="1" Name="MainFrame" Margin="80 0 80 0" NavigationUIVisibility="Hidden"/>
     </Grid>
 </UserControl>

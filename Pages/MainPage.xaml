@@ -26,39 +26,39 @@
             <Button
                 Margin="10"
   Width="100"
-  Content="Cart"
+  Content="Cart" FontSize="17"
                 Click="Cart_Click"
   Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
   ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button
                 Margin="10"
   Width="100"
-  Content="Catalog"
+  Content="Catalog"  FontSize="17"
                 Click="Catalog_Click"
   Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
   ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button
                 Margin="10"
   Width="100"
-  Content="Checkout"
+  Content="Checkout"  FontSize="17"
                 Click="Checkout_Click"
   Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
   ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
-            <Button
+            <Button  FontSize="15"
                 Margin="10"
   Width="100"
   Content="GoodInfo"
                 Click="GoodInfo_Click"
   Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
   ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
-            <Button
+            <Button  FontSize="17"
                 Margin="10"
   Width="100"
   Content="UserInfo"
                 Click="UserInfo_Click"
 Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
 ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
-            <Button
+            <Button  FontSize="17"
                 Margin="10"
   Width="100"
   Content="Login"
@@ -66,13 +66,13 @@ ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
 Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
 ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button
-                Margin="10"
+                Margin="10"  FontSize="16"
   Width="120"
   Content="Registration"
                 Click="Registration_Click"
 Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
 ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
-            <Button
+            <Button  FontSize="16"
                 Margin="10"
   Width="100"
   Content="StartPage"

@@ -12,27 +12,31 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp6.Domain;
+using WpfApp6.Navigator;
 
 namespace WpfApp6.Pages
 {
     /// <summary>
     /// Interaction logic for MainList.xaml
     /// </summary>
-    public partial class MainList : UserControl
+    public partial class MainGoodsList : UserControl
     {
-        public MainList()
+        Frame MainFrame;
+        public MainGoodsList(Frame MainFrame)
         {
+            this.MainFrame = MainFrame;
             InitializeComponent();
-            LVMain.ItemsSource = MainWindow.list.goods;
+            LVMain.ItemsSource = MainWindow.goodList.goods;
         }
         private void LVMain_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            MainFrame.Content = new GoodInfo();
         }
 
         private void LVMain_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            MainWindow.goodList.selectedGud = LVMain.SelectedItem as Goods;
         }
     }
 }

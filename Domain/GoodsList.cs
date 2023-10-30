@@ -9,6 +9,7 @@ namespace WpfApp6.Domain
     public class GoodsList
     {
         public List<Goods> goods;
+        public Goods? selectedGud = null;
         public GoodsList()
         {
             goods = new List<Goods>();

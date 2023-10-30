@@ -14,7 +14,6 @@
         </Grid.RowDefinitions>
         <StackPanel Name="SPTitle" Orientation="Horizontal" Grid.Row="0">
             <StackPanel Name="ChildPanel" Orientation="Vertical">
-
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -20,10 +20,12 @@ namespace WpfApp6.Pages
     /// </summary>
     public partial class MainList : UserControl
     {
-        public MainList()
+        Frame MainFrame;
+        public MainList(Frame MainFrame)
         {
             InitializeComponent();
             LVMain.ItemsSource = MainWindow.list.goods;
+            this.MainFrame = MainFrame;
         }
         private void LVMain_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {

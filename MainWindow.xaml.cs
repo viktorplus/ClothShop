@@ -26,6 +26,8 @@ namespace WpfApp6
     {
         public static UserList userList;
         public static GoodsList list;
+        public static User CurrentUser { get; set; }
+
         public MainWindow()
         {
 

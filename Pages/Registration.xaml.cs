@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.DirectoryServices.ActiveDirectory;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp6.Domain;
 using WpfApp6.Navigator;
+using WpfApp6.Pages;
 
 namespace WpfApp6.Pages
 {
@@ -22,36 +24,45 @@ namespace WpfApp6.Pages
     /// </summary>
     public partial class Registation : UserControl
     {
-        public Registation()
+        Frame MainFrame;
+
+        public Registation(Frame mainframe)
         {
             InitializeComponent();
+            this.MainFrame = mainframe;
         }
-
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            //        string firstName = FirstNameTextBox.Text;
-            //        string lastName = LastNameTextBox.Text;
-            //        string email = EmailTextBox.Text;
-            //        string password = PasswordBox.Password;
-            //        DateTime dateOfBirth = DateOfBirthPicker.SelectedDate ?? DateTime.MinValue;
-            //        string address = AddressTextBox.Text;
-            //        string phoneNumber = PhoneNumberTextBox.Text;
+            string firstName = FirstNameTextBox.Text;
+            string lastName = LastNameTextBox.Text;
+            string email = EmailTextBox.Text;
+            string username = UserNameTextBox.Text;
+            string password = PasswordBox.Password;
+            DateTime dateOfBirth = DateOfBirthPicker.SelectedDate ?? DateTime.MinValue;
+            string address = AddressTextBox.Text;
+            string phoneNumber = PhoneNumberTextBox.Text;
 
-            //        User newUser = new User(firstName, lastName, email, password, dateOfBirth, address, phoneNumber);
-            //        userList.AddUser(newUser);
+            User newUser = new User(firstName, lastName, email, username, password, dateOfBirth, address, phoneNumber);
+            MainWindow.userList.AddUser(newUser);
 
-            //        FirstNameTextBox.Clear();
-            //        LastNameTextBox.Clear();
-            //        EmailTextBox.Clear();
-            //        PasswordBox.Clear();
-            //        DateOfBirthPicker.SelectedDate = null;
-            //        AddressTextBox.Clear();
-            //        PhoneNumberTextBox.Clear();
-        }
+            FirstNameTextBox.Clear();
+            LastNameTextBox.Clear();
+            EmailTextBox.Clear();
+            UserNameTextBox.Clear();
+            PasswordBox.Clear();
+            DateOfBirthPicker.SelectedDate = null;
+            AddressTextBox.Clear();
+            PhoneNumberTextBox.Clear();
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            NavigatorObject.Switch(new Catalog());
+            if (MessageBox.Show("Registration Complete. Get Login.", "Confirmation", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+            {
+                MainFrame.Content = new Login(MainFrame);
+            }
+            else
+            {
+                //NavigatorObject.Switch(new Catalog());
+                MainFrame.Content = new MainList(MainFrame);
+            }
         }
     }
 }

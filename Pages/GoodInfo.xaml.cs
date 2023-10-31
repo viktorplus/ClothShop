@@ -28,9 +28,11 @@ namespace WpfApp6.Pages
             image.BeginInit();
             image.UriSource = new Uri(MainWindow.goodList.selectedGud?.photo ?? @"https://t4.ftcdn.net/jpg/04/20/44/43/360_F_420444334_ZYBSR9hxn92eruuPj9kHqObfQmxFMmlm.jpg");
             image.EndInit();
-            Image myImage = new Image();
-            myImage.Source = image;
-            SPTitle.Children.Add(myImage);
+            GoodImage.Source = image;
+            GoodImage.Width = 300;
+            GoodImage.Height = 300;
+            LGoodPrice.Content = MainWindow.goodList.selectedGud?.Price + " $";
+            LGoodName.Content = MainWindow.goodList.selectedGud?.Name;
         }
     }
 }

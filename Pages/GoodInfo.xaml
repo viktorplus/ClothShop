@@ -8,13 +8,17 @@
              d:DesignHeight="450" d:DesignWidth="800" Background="White">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="311*"/>
-            <RowDefinition Height="395*"/>
-            <RowDefinition Height="128*"/>
+            <RowDefinition Height="209*"/>
+            <RowDefinition Height="189*"/>
+            <RowDefinition Height="52*"/>
         </Grid.RowDefinitions>
         <StackPanel Name="SPTitle" Orientation="Horizontal" Grid.Row="0">
-            <StackPanel Name="ChildPanel" Orientation="Vertical">
-            </StackPanel>
+            <Image Name="GoodImage"/>
+            <DockPanel Name="ChildPanel" Grid.Column="0" Width="500">
+                <Label Name="LGoodName" Content="GoodName" FontSize="60" HorizontalContentAlignment="Left" VerticalContentAlignment="Top"/>
+                <Label Name="LGoodPrice" Content="GoodPrice" Grid.Row="0" FontSize="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom"/>
+            </DockPanel>
+            <StackPanel/>
         </StackPanel>
     </Grid>
 </UserControl>

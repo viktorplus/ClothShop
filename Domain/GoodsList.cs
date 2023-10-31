@@ -15,6 +15,16 @@ namespace WpfApp6.Domain
             goods = new List<Goods>();
         }
 
+        public List<Goods> DistinctGoods()
+        {
+            return goods.GroupBy(x => x.ItemId).Select(g => g.First()).ToList();
+        }
+
+        public List<Goods> ListByItemID(int id)
+        {
+            return goods.Where(x => x.ItemId==id).ToList();
+        }
+
         public void AddGud(Goods gud)
         {
             goods.Add(gud);

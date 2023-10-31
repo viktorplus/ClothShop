@@ -27,7 +27,7 @@ namespace WpfApp6.Pages
         {
             this.MainFrame = MainFrame;
             InitializeComponent();
-            LVMain.ItemsSource = MainWindow.goodList.goods;
+            LVMain.ItemsSource = MainWindow.goodList.DistinctGoods();
         }
         private void LVMain_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp6.Domain;
 
 namespace WpfApp6.Pages
 {
@@ -20,9 +21,17 @@ namespace WpfApp6.Pages
     /// </summary>
     public partial class UserInfo : UserControl
     {
-        public UserInfo()
+        Frame MainFrame;
+        private User currentUser;
+
+        public UserInfo(Frame mainFrame, User user)
         {
             InitializeComponent();
+            MainFrame = mainFrame;
+            currentUser = user; // Получаем текущего пользователя из параметров
+            // Устанавливаем currentUser как контекст данных для страницы
+            DataContext = currentUser;
         }
+
     }
 }

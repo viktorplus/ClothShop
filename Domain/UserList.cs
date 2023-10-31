@@ -27,6 +27,10 @@ namespace WpfApp6.Domain
             return false; // Пользователь не найден или пароль неверен
         }
 
+        public User GetUserByLogin(string login)
+        {
+            return users.Find(user => user.Username == login);
+        }
 
         public void AddUser(User user)
         {

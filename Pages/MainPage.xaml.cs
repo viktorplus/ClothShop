@@ -67,7 +67,7 @@ namespace WpfApp6.Pages
         {
             if (MainFrame.Content.GetType() != typeof(UserInfo))
             {
-                MainFrame.Content = new UserInfo();
+                MainFrame.Content = new UserInfo(MainFrame, MainWindow.CurrentUser);
             }
         }
 

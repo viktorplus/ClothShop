@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp6.Domain;
 
 namespace WpfApp6.Pages
 {
@@ -35,7 +36,9 @@ namespace WpfApp6.Pages
 
             if (MainWindow.userList.ValidateUser(login, password))
             {
-                MainFrame.Content = new MainList(MainFrame);
+                MainWindow.CurrentUser = MainWindow.userList.GetUserByLogin(login);
+
+        MainFrame.Content = new MainList(MainFrame);
             }
             else
             {

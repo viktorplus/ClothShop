@@ -36,17 +36,19 @@ namespace WpfApp6.Pages
             string firstName = FirstNameTextBox.Text;
             string lastName = LastNameTextBox.Text;
             string email = EmailTextBox.Text;
+            string username = UserNameTextBox.Text;
             string password = PasswordBox.Password;
             DateTime dateOfBirth = DateOfBirthPicker.SelectedDate ?? DateTime.MinValue;
             string address = AddressTextBox.Text;
             string phoneNumber = PhoneNumberTextBox.Text;
 
-            User newUser = new User(firstName, lastName, email, password, dateOfBirth, address, phoneNumber);
+            User newUser = new User(firstName, lastName, email, username, password, dateOfBirth, address, phoneNumber);
             MainWindow.userList.AddUser(newUser);
 
             FirstNameTextBox.Clear();
             LastNameTextBox.Clear();
             EmailTextBox.Clear();
+            UserNameTextBox.Clear();
             PasswordBox.Clear();
             DateOfBirthPicker.SelectedDate = null;
             AddressTextBox.Clear();

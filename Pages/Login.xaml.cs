@@ -27,5 +27,20 @@ namespace WpfApp6.Pages
             InitializeComponent();
             MainFrame = mainFrame;
         }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            string login = LoginTextBox.Text;
+            string password = PasswordBox.Password;
+
+            if (MainWindow.userList.ValidateUser(login, password))
+            {
+                MainFrame.Content = new MainList(MainFrame);
+            }
+            else
+            {
+                MessageBox.Show("Неправильный логин или пароль. Попробуйте еще раз.");
+            }
+        }
     }
 }

@@ -28,8 +28,8 @@
         <Label Content="Phone Number:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,200,0,0"/>
         <TextBox Name="PhoneNumberTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,200,0,0" Width="200"/>
 
-        <Button Content="Register" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="20,230,0,0" Click="RegisterButton_Click"/>
-        <Button Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Width="100" Content="Back" Click="Button_Click" Background="{DynamicResource MaterialDesignDarkBackground}"/>
+        <Button VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,243,0,0" Width="100" Content="Register" Click="RegisterButton_Click" Background="{DynamicResource MaterialDesignDarkBackground}"/>
+
 
     </Grid>
 </UserControl>

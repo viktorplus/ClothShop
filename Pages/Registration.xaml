@@ -18,37 +18,39 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="First Name:" Grid.Row="0" Grid.Column="0"/>
-        <TextBox Name="FirstNameTextBox" Grid.Row="0" Grid.Column="1" Width="200"/>
+        <Label Content="First Name:" Grid.Row="0" Grid.Column="1"/>
+        <TextBox Name="FirstNameTextBox" Grid.Row="0" Grid.Column="2" Width="200"/>
 
-        <Label Content="Last Name:" Grid.Row="1" Grid.Column="0"/>
-        <TextBox Name="LastNameTextBox" Grid.Row="1" Grid.Column="1" Width="200"/>
+        <Label Content="Last Name:" Grid.Row="1" Grid.Column="1"/>
+        <TextBox Name="LastNameTextBox" Grid.Row="1" Grid.Column="2" Width="200"/>
 
-        <Label Content="Email:" Grid.Row="2" Grid.Column="0"/>
-        <TextBox Name="EmailTextBox" Grid.Row="2" Grid.Column="1" Width="200"/>
+        <Label Content="Email:" Grid.Row="2" Grid.Column="1"/>
+        <TextBox Name="EmailTextBox" Grid.Row="2" Grid.Column="2" Width="200"/>
 
-        <Label Content="UserName:" Grid.Row="3" Grid.Column="0"/>
-        <TextBox Name="UserNameTextBox" Grid.Row="3" Grid.Column="1" Width="200"/>
+        <Label Content="UserName:" Grid.Row="3" Grid.Column="1"/>
+        <TextBox Name="UserNameTextBox" Grid.Row="3" Grid.Column="2" Width="200"/>
 
-        <Label Content="Password:" Grid.Row="4" Grid.Column="0"/>
-        <PasswordBox Name="PasswordBox" Grid.Row="4" Grid.Column="1" Width="200"/>
+        <Label Content="Password:" Grid.Row="4" Grid.Column="1"/>
+        <PasswordBox Name="PasswordBox" Grid.Row="4" Grid.Column="2" Width="200"/>
 
-        <Label Content="Date of Birth:" Grid.Row="5" Grid.Column="0"/>
-        <DatePicker Name="DateOfBirthPicker" Grid.Row="5" Grid.Column="1" Width="200"/>
+        <Label Content="Date of Birth:" Grid.Row="5" Grid.Column="1"/>
+        <DatePicker Name="DateOfBirthPicker" Grid.Row="5" Grid.Column="2" Width="200"/>
 
-        <Label Content="Address:" Grid.Row="6" Grid.Column="0"/>
-        <TextBox Name="AddressTextBox" Grid.Row="6" Grid.Column="1" Width="200" />
+        <Label Content="Address:" Grid.Row="6" Grid.Column="1"/>
+        <TextBox Name="AddressTextBox" Grid.Row="6" Grid.Column="2" Width="200" />
 
-        <Label Content="Phone Number:" Grid.Row="7" Grid.Column="0"/>
-        <TextBox Name="PhoneNumberTextBox" Grid.Row="7" Grid.Column="1" Width="200" Margin="0,0,0,139"/>
+        <Label Content="Phone Number:" Grid.Row="7" Grid.Column="1"/>
+        <TextBox Name="PhoneNumberTextBox" Grid.Row="7" Grid.Column="2" Width="200" />
 
-        <Button Grid.Row="8" Grid.Column="1" Width="100" Content="Register" Click="RegisterButton_Click" Background="{DynamicResource MaterialDesignDarkBackground}"/>
+        <Button Grid.Row="8" Grid.Column="2" Width="100" Content="Register" Margin="50" Click="RegisterButton_Click" Background="{DynamicResource MaterialDesignDarkBackground}"/>
     </Grid>
 </UserControl>

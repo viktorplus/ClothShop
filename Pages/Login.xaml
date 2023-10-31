@@ -14,15 +14,16 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120"/>
+            <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
 
-        <Label Content="Логин:" Grid.Row="0" Grid.Column="0"/>
-        <TextBox Name="LoginTextBox" Grid.Row="0" Grid.Column="1" Width="200"/>
+        <Label Content="Логин:" Grid.Row="0" Grid.Column="1"/>
+        <TextBox Name="LoginTextBox" Grid.Row="0" Grid.Column="2" Width="200"/>
 
-        <Label Content="Пароль:" Grid.Row="1" Grid.Column="0"/>
-        <PasswordBox Name="PasswordBox" Grid.Row="1" Grid.Column="1" Width="200"/>
+        <Label Content="Пароль:" Grid.Row="1" Grid.Column="1"/>
+        <PasswordBox Name="PasswordBox" Grid.Row="1" Grid.Column="2" Width="200"/>
 
-        <Button Content="Войти" Grid.Row="2" Grid.Column="1" Margin="50" Width="100" Click="LoginButton_Click" Background="{DynamicResource MaterialDesignDarkBackground}"/>
+        <Button Content="Войти" Grid.Row="2" Grid.Column="2" Margin="50" Width="100" Click="LoginButton_Click" Background="{DynamicResource MaterialDesignDarkBackground}"/>
     </Grid>
 </UserControl>

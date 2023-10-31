@@ -26,10 +26,10 @@ namespace WpfApp6.Pages
     {
         Frame MainFrame;
 
-        public Registation(Frame mainFrame)
+        public Registation(Frame mainframe)
         {
             InitializeComponent();
-            this.MainFrame = mainFrame;
+            this.MainFrame = mainframe;
         }
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
@@ -60,12 +60,6 @@ namespace WpfApp6.Pages
             {
                 MainFrame.Content = new Catalog();
             }
-
-
-        }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            NavigatorObject.Switch(new Catalog());
         }
     }
 }

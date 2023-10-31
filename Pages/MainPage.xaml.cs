@@ -27,7 +27,7 @@ namespace WpfApp6.Pages
         {
             InitializeComponent();
 
-            MainFrame.Content = new MainList();
+            MainFrame.Content = new MainList(MainFrame);
         }
 
         private void Cart_Click(object sender, RoutedEventArgs e)
@@ -43,7 +43,7 @@ namespace WpfApp6.Pages
         {
             if(MainFrame.Content.GetType()!=typeof(MainList))
             {
-                MainFrame.Content = new MainList();
+                MainFrame.Content = new MainList(MainFrame);
             }
         }
 
@@ -83,7 +83,7 @@ namespace WpfApp6.Pages
         {
             if (MainFrame.Content.GetType() != typeof(Registation))
             {
-                MainFrame.Content = new Registation();
+                MainFrame.Content = new Registation(MainFrame);
             }
         }
 

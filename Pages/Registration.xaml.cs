@@ -24,9 +24,12 @@ namespace WpfApp6.Pages
     /// </summary>
     public partial class Registation : UserControl
     {
-        public Registation()
+        Frame MainFrame;
+
+        public Registation(Frame mainFrame)
         {
             InitializeComponent();
+            this.MainFrame = mainFrame;
         }
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
@@ -55,7 +58,7 @@ namespace WpfApp6.Pages
             }
             else
             {
-                NavigatorObject.Switch(new Catalog());
+                MainFrame.Content = new Catalog();
             }
 
 

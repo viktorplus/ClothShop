@@ -20,9 +20,12 @@ namespace WpfApp6.Pages
     /// </summary>
     public partial class Login : UserControl
     {
-        public Login()
+        Frame MainFrame;
+
+        public Login(Frame mainFrame)
         {
             InitializeComponent();
+            MainFrame = mainFrame;
         }
     }
 }

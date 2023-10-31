@@ -54,11 +54,12 @@ namespace WpfApp6.Pages
 
             if (MessageBox.Show("Registration Complete. Get Login.", "Confirmation", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
             {
-                MainFrame.Content = new Login();
+                MainFrame.Content = new Login(MainFrame);
             }
             else
             {
-                MainFrame.Content = new Catalog();
+                //NavigatorObject.Switch(new Catalog());
+                MainFrame.Content = new MainList(MainFrame);
             }
         }
     }

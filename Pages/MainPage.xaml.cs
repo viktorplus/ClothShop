@@ -75,7 +75,7 @@ namespace WpfApp6.Pages
         {
             if (MainFrame.Content.GetType() != typeof(Login))
             {
-                MainFrame.Content = new Login();
+                MainFrame.Content = new Login(MainFrame);
             }
         }
 

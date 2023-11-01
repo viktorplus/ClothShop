@@ -28,7 +28,7 @@ namespace WpfApp6.Pages
         {
             this.MainFrame = MainFrame;
             InitializeComponent();
-            LVMain.ItemsSource = MainWindow.goodList.DistinctGoods();
+            LVMain.ItemsSource = MainWindow.goodsList.DistinctGoods();
         }
         private void LVMain_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
@@ -37,7 +37,7 @@ namespace WpfApp6.Pages
 
         private void LVMain_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            MainWindow.goodList.selectedGud = LVMain.SelectedItem as Goods;
+            MainWindow.goodsList.selectedGud = LVMain.SelectedItem as Goods;
         }
     }
 }

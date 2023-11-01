@@ -27,7 +27,7 @@ namespace WpfApp6.Pages
         {
             InitializeComponent();
 
-            MainFrame.Content = new MainList(MainFrame);
+            MainFrame.Content = new MainGoodsList(MainFrame);
         }
 
         private void Cart_Click(object sender, RoutedEventArgs e)
@@ -41,9 +41,9 @@ namespace WpfApp6.Pages
 
         private void Catalog_Click(object sender, RoutedEventArgs e)
         {
-            if(MainFrame.Content.GetType()!=typeof(MainList))
+            if(MainFrame.Content.GetType()!=typeof(MainGoodsList))
             {
-                MainFrame.Content = new MainList(MainFrame);
+                MainFrame.Content = new MainGoodsList(MainFrame);
             }
         }
 

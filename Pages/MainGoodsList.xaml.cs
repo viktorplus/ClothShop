@@ -18,13 +18,13 @@ namespace WpfApp6.Pages
     /// <summary>
     /// Interaction logic for MainList.xaml
     /// </summary>
-    public partial class MainList : UserControl
+    public partial class MainGoodsList : UserControl
     {
         Frame MainFrame;
-        public MainList(Frame MainFrame)
+        public MainGoodsList(Frame MainFrame)
         {
             InitializeComponent();
-            LVMain.ItemsSource = MainWindow.list.goods;
+            LVMain.ItemsSource = MainWindow.goodsList.goods;
             this.MainFrame = MainFrame;
         }
         private void LVMain_MouseDoubleClick(object sender, MouseButtonEventArgs e)

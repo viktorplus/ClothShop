@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,9 +10,25 @@ namespace WpfApp6.Domain
     public class GoodsList
     {
         public List<Goods> goods;
+        public Goods? selectedGud = null;
         public GoodsList()
         {
             goods = new List<Goods>();
+        }
+
+        public List<Goods> DistinctGoods()
+        {
+            return goods.GroupBy(x => x.ItemId).Select(g => g.First()).ToList();
+        }
+
+        public List<Goods> DistinctColoredGoodsByID(int id)
+        {
+            return goods.Where(x => x.ItemId == id).GroupBy(x => x.Color.ToLower()).Select(x => x.First()).ToList();
+        }
+
+        public List<Goods> DistinctSizedGoodsByID(int id)
+        {
+            return goods.Where(x => x.ItemId == id).GroupBy(x => x.Size.ToLower()).Select(x => x.First()).ToList();
         }
 
         public void AddGud(Goods gud)

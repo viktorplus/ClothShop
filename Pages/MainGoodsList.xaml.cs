@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp6.Domain;
+using WpfApp6.Navigator;
+
 
 namespace WpfApp6.Pages
 {
@@ -23,18 +26,18 @@ namespace WpfApp6.Pages
         Frame MainFrame;
         public MainGoodsList(Frame MainFrame)
         {
-            InitializeComponent();
-            LVMain.ItemsSource = MainWindow.goodsList.goods;
             this.MainFrame = MainFrame;
+            InitializeComponent();
+            LVMain.ItemsSource = MainWindow.goodList.DistinctGoods();
         }
         private void LVMain_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            MainFrame.Content = new GoodInfo();
         }
 
         private void LVMain_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            MainWindow.goodList.selectedGud = LVMain.SelectedItem as Goods;
         }
     }
 }

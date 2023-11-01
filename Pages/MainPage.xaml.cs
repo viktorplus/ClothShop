@@ -67,7 +67,7 @@ namespace WpfApp6.Pages
         {
             if (MainFrame.Content.GetType() != typeof(UserInfo))
             {
-                MainFrame.Content = new UserInfo();
+                MainFrame.Content = new UserInfo(MainFrame, MainWindow.CurrentUser);
             }
         }
 
@@ -75,7 +75,7 @@ namespace WpfApp6.Pages
         {
             if (MainFrame.Content.GetType() != typeof(Login))
             {
-                MainFrame.Content = new Login();
+                MainFrame.Content = new Login(MainFrame);
             }
         }
 
@@ -83,7 +83,7 @@ namespace WpfApp6.Pages
         {
             if (MainFrame.Content.GetType() != typeof(Registation))
             {
-                MainFrame.Content = new Registation();
+                MainFrame.Content = new Registation(MainFrame);
             }
         }
 

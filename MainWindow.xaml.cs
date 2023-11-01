@@ -25,7 +25,8 @@ namespace WpfApp6
     public partial class MainWindow : Window
     {
         public static UserList userList;
-        public static GoodsList goodList;
+        public static GoodsList goodsList;
+        public static User CurrentUser { get; set; }
         public MainWindow()
         {
 

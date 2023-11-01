@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using WpfApp6.Domain;
 using WpfApp6.Navigator;
 
+
 namespace WpfApp6.Pages
 {
     /// <summary>

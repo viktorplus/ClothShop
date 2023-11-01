@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp6.Domain;
 
 namespace WpfApp6.Pages
 {
@@ -20,9 +21,29 @@ namespace WpfApp6.Pages
     /// </summary>
     public partial class Login : UserControl
     {
-        public Login()
+        Frame MainFrame;
+
+        public Login(Frame mainFrame)
         {
             InitializeComponent();
+            MainFrame = mainFrame;
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            string login = LoginTextBox.Text;
+            string password = PasswordBox.Password;
+
+            if (MainWindow.userList.ValidateUser(login, password))
+            {
+                MainWindow.CurrentUser = MainWindow.userList.GetUserByLogin(login);
+
+        MainFrame.Content = new MainGoodsList(MainFrame);
+            }
+            else
+            {
+                MessageBox.Show("Неправильный логин или пароль. Попробуйте еще раз.");
+            }
         }
     }
 }

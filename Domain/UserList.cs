@@ -15,6 +15,23 @@ namespace WpfApp6.Domain
             users = new List<User>();
         }
 
+        public bool ValidateUser(string login, string password)
+        {
+            foreach (User user in users)
+            {
+                if (user.Username == login && user.VerifyPassword(password))
+                {
+                    return true; // Пользователь найден и пароль верен
+                }
+            }
+            return false; // Пользователь не найден или пароль неверен
+        }
+
+        public User GetUserByLogin(string login)
+        {
+            return users.Find(user => user.Username == login);
+        }
+
         public void AddUser(User user)
         {
             users.Add(user);

@@ -41,7 +41,7 @@ namespace WpfApp6.Pages
 
         private void Catalog_Click(object sender, RoutedEventArgs e)
         {
-            if(MainFrame.Content.GetType()!=typeof(GoodsList))
+            if(MainFrame.Content.GetType()!=typeof(MainGoodsList))
             {
                 MainFrame.Content = new MainGoodsList(MainFrame);
             }

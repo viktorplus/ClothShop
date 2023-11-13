@@ -23,11 +23,10 @@ namespace WpfApp6.Pages
     /// </summary>
     public partial class Catalog : UserControl
     {
-        public Catalog()
+        public Catalog(string? startSort = null)
         {
             InitializeComponent();
-
-            MainFrame.Content = new MainGoodsList(MainFrame);
+            MainFrame.Content = new MainGoodsList(MainFrame, MainWindow.goodsList.DistinctGoods(), startSort);
         }
 
         private void Cart_Click(object sender, RoutedEventArgs e)
@@ -35,7 +34,7 @@ namespace WpfApp6.Pages
 
             if (MainFrame.Content.GetType() != typeof(Cart))
             {
-                MainFrame.Content = new Cart();
+                MainFrame.Content = new Cart(MainFrame);
             }
         }
 
@@ -43,7 +42,7 @@ namespace WpfApp6.Pages
         {
             if(MainFrame.Content.GetType()!=typeof(MainGoodsList))
             {
-                MainFrame.Content = new MainGoodsList(MainFrame);
+                MainFrame.Content = new MainGoodsList(MainFrame,MainWindow.goodsList.DistinctGoods());
             }
         }
 
@@ -59,7 +58,7 @@ namespace WpfApp6.Pages
         {
             if (MainFrame.Content.GetType() != typeof(GoodInfo))
             {
-                MainFrame.Content = new GoodInfo();
+                MainFrame.Content = new GoodInfo(MainFrame);
             }
         }
 

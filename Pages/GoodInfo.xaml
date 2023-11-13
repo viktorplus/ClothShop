@@ -43,6 +43,6 @@
                 <Label Name="LDayAdded" VerticalAlignment="Bottom" FontSize="20"/>
             </StackPanel>
         </Border>
-        <Button Grid.Row="2" Content="Add to cart" Background="LightGreen" Foreground="Black" Width="350" Height="50" FontSize="23"/>
+        <Button Grid.Row="2" Content="Add to cart" Background="LightGreen" Foreground="Black" Width="350" Height="50" FontSize="23" Click="ToCartClick"/>
     </Grid>
 </UserControl>

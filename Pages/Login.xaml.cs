@@ -38,7 +38,7 @@ namespace WpfApp6.Pages
             {
                 MainWindow.CurrentUser = MainWindow.userList.GetUserByLogin(login);
 
-        MainFrame.Content = new MainGoodsList(MainFrame);
+        MainFrame.Content = new MainGoodsList(MainFrame, MainWindow.goodsList.DistinctGoods());
             }
             else
             {

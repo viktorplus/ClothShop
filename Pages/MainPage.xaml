@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-                     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:local="clr-namespace:WpfApp6.Pages"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1200" >
@@ -24,58 +24,37 @@
             </StackPanel.Background>
             <Button
                 Margin="10"
-  Width="100"
+  Width="180"
   Content="Cart" FontSize="17"
                 Click="Cart_Click"
   Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
   ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button
                 Margin="10"
-  Width="100"
+  Width="180"
   Content="Catalog"  FontSize="17"
                 Click="Catalog_Click"
   Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
   ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
-            <Button
-                Margin="10"
-  Width="120"
-  Content="Checkout"  FontSize="17"
-                Click="Checkout_Click"
-  Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
-  ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button  FontSize="17"
                 Margin="10"
-  Width="120"
-  Content="GoodInfo"
-                Click="GoodInfo_Click"
-  Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
-  ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
-            <Button  FontSize="17"
-                Margin="10"
-  Width="100"
-  Content="UserInfo"
+  Width="180"
+  Content="Private page"
                 Click="UserInfo_Click"
 Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
 ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button  FontSize="17"
                 Margin="10"
-  Width="100"
-  Content="Login"
+  Width="180"
+  Content="Log in"
                 Click="Login_Click"
 Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
 ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
             <Button
                 Margin="10"  FontSize="16"
-  Width="120"
+  Width="180"
   Content="Registration"
                 Click="Registration_Click"
-Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
-ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
-            <Button  FontSize="16"
-                Margin="10"
-  Width="100"
-  Content="StartPage"
-                Click="StartPage_Click"
 Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}"
 ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
         </StackPanel>

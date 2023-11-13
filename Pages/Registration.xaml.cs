@@ -61,7 +61,7 @@ namespace WpfApp6.Pages
             else
             {
                 //NavigatorObject.Switch(new Catalog());
-                MainFrame.Content = new MainGoodsList(MainFrame);
+                MainFrame.Content = new MainGoodsList(MainFrame, MainWindow.goodsList.DistinctGoods());
             }
         }
     }

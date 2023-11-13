@@ -5,8 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp6.Pages"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="800" d:DesignWidth="1200" Background="White">
     <Grid>
-            
+        <Label Content="Choose your targeted clothes category" FontSize="50" Margin="40"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Width="300" Height="300" Content="Male" FontSize="50" Margin="50 0 50 0"
+  Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}" Background="LightBlue" Click="BMale"
+  ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
+            <Button Width="300" Height="300" Content="Both" FontSize="50" Click="BBoth" Margin="50 0 50 0"
+  Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}" Background="PeachPuff"
+  ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
+            <Button Width="300" Height="300" Content="Female" FontSize="50" Click="BFemale" Margin="50 0 50 0"
+  Style="{StaticResource MaterialDesignPaperSecondaryDarkButton}" Background="LightPink"
+  ToolTip="Resource name: MaterialDesignPaperSecondaryDarkButton" />
+        </StackPanel>
     </Grid>
 </UserControl>

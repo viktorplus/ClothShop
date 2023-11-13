@@ -16,10 +16,12 @@ namespace WpfApp6.Domain
         private DateTime _dateofbirth;
         private string _address;
         private string _phonenumber;
+        public GoodsList cart;
 
 
         public User(string firstName, string lastName, string email, string username, string password, DateTime dateOfBirth, string address, string phoneNumber)
         {
+            cart = new GoodsList();
             _firstname = firstName;
             _lastname = lastName;
             _email = email;

@@ -64,8 +64,13 @@ namespace WpfApp6.Domain
             get { return dateAdded; }
             set { dateAdded = value; NotifyPropertyChanged("DateAdded"); }
         }
-
-        public Goods(int itemId, string photo, string name, string description, string color, string size, int count, float price, DateTime dateAdded)
+        public string gender;
+        public string Gender
+        {
+            get { return gender; }
+            set { gender = value; NotifyPropertyChanged("Gender"); }
+        }
+        public Goods(int itemId, string photo, string name, string description, string color, string size, int count, float price, DateTime dateAdded, string gender)
         {
             ItemId = itemId;
             Photo = photo;
@@ -76,6 +81,7 @@ namespace WpfApp6.Domain
             Count = count;
             Price = price;
             DateAdded = dateAdded;
+            Gender = gender;
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

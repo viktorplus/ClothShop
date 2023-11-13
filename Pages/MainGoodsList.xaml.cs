@@ -24,20 +24,39 @@ namespace WpfApp6.Pages
     public partial class MainGoodsList : UserControl
     {
         Frame MainFrame;
-        public MainGoodsList(Frame MainFrame)
+        public MainGoodsList(Frame MainFrame, List<Goods> goods, string? startSortBy = null)
         {
             this.MainFrame = MainFrame;
             InitializeComponent();
-            LVMain.ItemsSource = MainWindow.goodsList.DistinctGoods();
+            CBGenderSelector.Items.Add("Male");
+            CBGenderSelector.Items.Add("Female");
+            CBGenderSelector.Items.Add("Both");
+            if (startSortBy != null)
+            {
+                List<Goods> gds = MainWindow.goodsList.goods.FindAll(x => x.gender == startSortBy).GroupBy(x => x.ItemId).Select(g => g.First()).ToList();
+                LVMain.ItemsSource = gds;
+            }
+            else
+            {
+                LVMain.ItemsSource = goods;
+            }
         }
         private void LVMain_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            MainFrame.Content = new GoodInfo();
+            MainFrame.Content = new GoodInfo(MainFrame);
         }
 
         private void LVMain_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             MainWindow.goodsList.selectedGud = LVMain.SelectedItem as Goods;
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (CBGenderSelector.Text != "")
+            {
+                List<Goods> gds = MainWindow.goodsList.goods.FindAll(x => x.gender == CBGenderSelector.Text).GroupBy(x => x.ItemId).Select(g => g.First()).ToList();
+                MainFrame.Content = new MainGoodsList(MainFrame, gds);
+            }
         }
     }
 }

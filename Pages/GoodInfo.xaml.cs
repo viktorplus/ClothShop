@@ -21,8 +21,10 @@ namespace WpfApp6.Pages
     /// </summary>
     public partial class GoodInfo : UserControl
     {
-        public GoodInfo()
+        Frame mainFrame;
+        public GoodInfo(Frame MainFrame)
         {
+            this.mainFrame = MainFrame;
             InitializeComponent();
             BitmapImage image = new BitmapImage();
             image.BeginInit();
@@ -43,6 +45,19 @@ namespace WpfApp6.Pages
                 {
                     CBSizeSelector.Items.Add(item.Size);
                 }
+            }
+        }
+
+        private void ToCartClick(object sender, RoutedEventArgs e)
+        {
+            if(MainWindow.CurrentUser == null)
+            {
+                mainFrame.Content = new Registation(mainFrame);
+            }
+            else if (MainWindow.goodsList.selectedGud!=null && CBColorSelector.Text!="" && CBSizeSelector.Text!="")
+            {
+                MainWindow.CurrentUser.cart.AddGud(MainWindow.goodsList.selectedGud);
+                mainFrame.Content = new Cart(mainFrame);
             }
         }
     }
